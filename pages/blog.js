@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import fs from "fs";
 
-import Nav from "./nav";
+import Nav from "./components/Nav";
 
 const Blog = ({ posts }) => {
   return (
@@ -34,7 +34,7 @@ export async function getStaticProps() {
 }
 
 Blog.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.string)
+  posts: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 export default Blog;

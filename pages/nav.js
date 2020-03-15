@@ -8,6 +8,7 @@ const Nav = () => (
     <Link href="/blog" as={process.env.BACKEND_URL + "/blog"}>
       <a>blog</a>
     </Link>
+    <style jsx></style>
   </>
 );
 

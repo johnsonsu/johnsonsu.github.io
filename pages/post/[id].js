@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import fs from "fs";
 import marked from "marked";
 
-import Nav from "../nav";
+import Nav from "../components/Nav";
 
 function Post({ post }) {
   const markdown = { __html: marked(post) };
@@ -36,7 +36,7 @@ export async function getStaticProps({ params }) {
 }
 
 Post.propTypes = {
-  post: PropTypes.string
+  post: PropTypes.string.isRequired
 };
 
 export default Post;
