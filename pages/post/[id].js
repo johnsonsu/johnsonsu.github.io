@@ -1,42 +1,41 @@
-import PropTypes from "prop-types";
-import fs from "fs";
-import marked from "marked";
+import PropTypes from 'prop-types'
+import fs from 'fs'
+import marked from 'marked'
 
-import Nav from "../components/Nav";
+import Layout from '../../components/Layout'
 
 function Post({ post }) {
-  const markdown = { __html: marked(post) };
+  const markdown = { __html: marked(post) }
 
   return (
-    <>
-      <Nav />
+    <Layout>
       <div dangerouslySetInnerHTML={markdown}></div>
-    </>
-  );
+    </Layout>
+  )
 }
 
 export async function getStaticPaths() {
-  const posts = await fs.promises.readdir("posts");
+  const posts = await fs.promises.readdir('posts')
 
   const paths = posts.map(post => ({
-    params: { id: post.slice(0, -3) }
-  }));
+    params: { id: post.slice(0, -3) },
+  }))
 
-  return { paths, fallback: false };
+  return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-  const post = await fs.promises.readFile(`posts/${params.id}.md`, "utf8");
+  const post = await fs.promises.readFile(`posts/${params.id}.md`, 'utf8')
 
   return {
     props: {
-      post
-    }
-  };
+      post,
+    },
+  }
 }
 
 Post.propTypes = {
-  post: PropTypes.string.isRequired
-};
+  post: PropTypes.string.isRequired,
+}
 
-export default Post;
+export default Post

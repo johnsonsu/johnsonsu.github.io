@@ -1,40 +1,39 @@
-import PropTypes from "prop-types";
-import fs from "fs";
+import PropTypes from 'prop-types'
+import fs from 'fs'
 
-import Nav from "./components/Nav";
+import Layout from '../components/Layout'
 
 const Blog = ({ posts }) => {
   return (
-    <div>
-      <Nav />
+    <Layout>
       <h1>Blog</h1>
 
       <ul>
         {posts.map(post => {
-          const name = post.slice(0, -3);
+          const name = post.slice(0, -3)
           return (
             <li key={name}>
               <a href={`/post/${name}`}>{name}</a>
             </li>
-          );
+          )
         })}
       </ul>
-    </div>
-  );
-};
+    </Layout>
+  )
+}
 
 export async function getStaticProps() {
-  const posts = await fs.promises.readdir("posts");
+  const posts = await fs.promises.readdir('posts')
 
   return {
     props: {
-      posts
-    }
-  };
+      posts,
+    },
+  }
 }
 
 Blog.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.string).isRequired
-};
+  posts: PropTypes.arrayOf(PropTypes.string).isRequired,
+}
 
-export default Blog;
+export default Blog

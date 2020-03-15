@@ -359,7 +359,7 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "body {\n  font-family: \"SF Pro Text\", \"SF Pro Icons\", \"Helvetica Neue\", \"Helvetica\",\n    \"Arial\", sans-serif;\n}\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;EACE;uBACqB;AACvB","file":"styles.css","sourcesContent":["body {\n  font-family: \"SF Pro Text\", \"SF Pro Icons\", \"Helvetica Neue\", \"Helvetica\",\n    \"Arial\", sans-serif;\n}\n"]}]);
+exports.push([module.i, "body {\n  font-family: \"SF Pro Text\", \"SF Pro Icons\", \"Helvetica Neue\", \"Helvetica\",\n    \"Arial\", sans-serif;\n  background-color: #ddd;\n  color: #333;\n}\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;EACE;uBACqB;EACrB,sBAAsB;EACtB,WAAW;AACb","file":"styles.css","sourcesContent":["body {\n  font-family: \"SF Pro Text\", \"SF Pro Icons\", \"Helvetica Neue\", \"Helvetica\",\n    \"Arial\", sans-serif;\n  background-color: #ddd;\n  color: #333;\n}\n"]}]);
 
 
 /***/ }),
@@ -4104,7 +4104,7 @@ var MyApp = function MyApp(_ref) {
 };
 
 MyApp.propTypes = {
-  Component: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.elementType,
+  Component: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.elementType.isRequired,
   pageProps: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (MyApp);

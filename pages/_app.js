@@ -1,13 +1,13 @@
-import PropTypes from "prop-types";
-import "../styles.css";
+import PropTypes from 'prop-types'
+import '../styles.css'
 
 const MyApp = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
-};
+  return <Component {...pageProps} />
+}
 
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object
-};
+  pageProps: PropTypes.object,
+}
 
-export default MyApp;
+export default MyApp

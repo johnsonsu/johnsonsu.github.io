@@ -1,10 +1,9 @@
-import Nav from "./components/Nav";
+import Layout from '../components/Layout'
 
 const About = () => (
-  <>
-    <Nav />
+  <Layout>
     <div>About</div>
-  </>
-);
+  </Layout>
+)
 
-export default About;
+export default About

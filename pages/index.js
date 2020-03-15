@@ -1,9 +1,5 @@
-import Nav from "./components/Nav";
+import Layout from '../components/Layout'
 
-const Home = () => (
-  <>
-    <Nav />
-  </>
-);
+const Home = () => <Layout>Hello</Layout>
 
-export default Home;
+export default Home
