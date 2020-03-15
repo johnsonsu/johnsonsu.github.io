@@ -6,7 +6,7 @@ const MyApp = ({ Component, pageProps }) => {
 };
 
 MyApp.propTypes = {
-  Component: PropTypes.node,
+  Component: PropTypes.elementType,
   pageProps: PropTypes.object
 };
 
