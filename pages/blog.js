@@ -13,7 +13,7 @@ const Blog = ({ posts }) => {
           const name = post.slice(0, -3)
           return (
             <li key={name}>
-              <a href={`/post/${name}`}>{name}</a>
+              <a href={`/post/${name}`}>{name.replace('-', ' ')}</a>
             </li>
           )
         })}
