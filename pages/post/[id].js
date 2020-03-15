@@ -2,9 +2,17 @@ import PropTypes from "prop-types";
 import fs from "fs";
 import marked from "marked";
 
+import Nav from "../nav";
+
 function Post({ post }) {
   const markdown = { __html: marked(post) };
-  return <div dangerouslySetInnerHTML={markdown}></div>;
+
+  return (
+    <>
+      <Nav />
+      <div dangerouslySetInnerHTML={markdown}></div>
+    </>
+  );
 }
 
 export async function getStaticPaths() {
