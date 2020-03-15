@@ -1,5 +1,7 @@
+import PropTypes from "prop-types";
 import fs from "fs";
-function Blog({ posts }) {
+
+const Blog = ({ posts }) => {
   return (
     <ul>
       {posts.map(post => {
@@ -12,7 +14,7 @@ function Blog({ posts }) {
       })}
     </ul>
   );
-}
+};
 
 export async function getStaticProps() {
   const posts = await fs.promises.readdir("posts");
@@ -23,5 +25,9 @@ export async function getStaticProps() {
     }
   };
 }
+
+Blog.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default Blog;

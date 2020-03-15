@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default () => (
+const Nav = () => (
   <>
     <Link href="/about" as={process.env.BACKEND_URL + "/about"}>
       <a>about</a>
@@ -10,3 +10,5 @@ export default () => (
     </Link>
   </>
 );
+
+export default Nav;

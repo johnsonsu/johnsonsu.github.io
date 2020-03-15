@@ -1,7 +1,10 @@
+import PropTypes from "prop-types";
 import fs from "fs";
+import marked from "marked";
 
 function Post({ post }) {
-  return <div>{post}</div>;
+  const markdown = { __html: marked(post) };
+  return <div dangerouslySetInnerHTML={markdown}></div>;
 }
 
 export async function getStaticPaths() {
@@ -23,5 +26,9 @@ export async function getStaticProps({ params }) {
     }
   };
 }
+
+Post.propTypes = {
+  post: PropTypes.string
+};
 
 export default Post;

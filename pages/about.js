@@ -1,7 +1,10 @@
 import Nav from "./nav";
-export default () => (
+
+const About = () => (
   <>
     <Nav />
     <div>About</div>
   </>
 );
+
+export default About;
