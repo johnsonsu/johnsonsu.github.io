@@ -1,6 +1,8 @@
 body {
-  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
   background-color: #ddd;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
