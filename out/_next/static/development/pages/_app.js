@@ -359,7 +359,7 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "body {\n  font-family: \"SF Pro Text\", \"SF Pro Icons\", \"Helvetica Neue\", \"Helvetica\",\n    \"Arial\", sans-serif;\n  background-color: #ddd;\n  color: #333;\n}\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;EACE;uBACqB;EACrB,sBAAsB;EACtB,WAAW;AACb","file":"styles.css","sourcesContent":["body {\n  font-family: \"SF Pro Text\", \"SF Pro Icons\", \"Helvetica Neue\", \"Helvetica\",\n    \"Arial\", sans-serif;\n  background-color: #ddd;\n  color: #333;\n}\n"]}]);
+exports.push([module.i, "body {\n  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',\n    'Arial', sans-serif;\n  background-color: #ddd;\n  color: #333;\n  margin: 0;\n  padding: 0;\n}\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;EACE;uBACqB;EACrB,sBAAsB;EACtB,WAAW;EACX,SAAS;EACT,UAAU;AACZ","file":"styles.css","sourcesContent":["body {\n  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',\n    'Arial', sans-serif;\n  background-color: #ddd;\n  color: #333;\n  margin: 0;\n  padding: 0;\n}\n"]}]);
 
 
 /***/ }),

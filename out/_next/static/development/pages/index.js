@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/about.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
 /***/ "./components/Layout.js":
 /*!******************************!*\
@@ -729,21 +729,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Fabout.js!./":
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Fabout.js ***!
-  \****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Findex.js!./":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Findex.js ***!
+  \***********************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/about", function() {
-      var mod = __webpack_require__(/*! ./pages/about.js */ "./pages/about.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
+      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
       if(true) {
-        module.hot.accept(/*! ./pages/about.js */ "./pages/about.js", function() {
-          if(!next.router.components["/about"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/about.js */ "./pages/about.js")
-          next.router.update("/about", updatedPage)
+        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
+          if(!next.router.components["/"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+          next.router.update("/", updatedPage)
         })
       }
       return mod
@@ -4463,9 +4463,9 @@ try {
 
 /***/ }),
 
-/***/ "./pages/about.js":
+/***/ "./pages/index.js":
 /*!************************!*\
-  !*** ./pages/about.js ***!
+  !*** ./pages/index.js ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4475,39 +4475,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-var _jsxFileName = "/Users/johnsonsu/Developer/github/johnsonsu.github.io/pages/about.js";
+var _jsxFileName = "/Users/johnsonsu/Developer/github/johnsonsu.github.io/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var About = function About() {
+var Home = function Home() {
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 3
     },
     __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, "About"));
+  }, "Hello");
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (About);
+/* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
-/***/ 4:
-/*!********************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Fabout.js ***!
-  \********************************************************************************************************************************************************/
+/***/ 1:
+/*!***************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Findex.js ***!
+  \***************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fabout&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Fabout.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fabout&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Fabout.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -4523,5 +4517,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=about.js.map
+},[[1,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=index.js.map
