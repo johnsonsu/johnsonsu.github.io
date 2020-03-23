@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types'
+import Head from 'next/head'
+
 import Nav from './Nav'
 
 const siteTitleStyle = {
@@ -10,8 +12,16 @@ const layoutStyle = {
   margin: '1em',
 }
 
-const Layout = ({ children }) => (
+const Layout = ({ children, title }) => (
   <div>
+    <Head>
+      <title>{title}</title>
+      <meta
+        name="viewport"
+        content="initial-scale=1.0, width=device-width"
+        key="viewport"
+      />
+    </Head>
     <h1 style={siteTitleStyle}>🦾</h1>
     <Nav />
     <div style={layoutStyle}>{children}</div>
@@ -23,6 +33,7 @@ Layout.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 export default Layout

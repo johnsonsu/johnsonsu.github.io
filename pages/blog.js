@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 
 const Blog = ({ posts }) => {
   return (
-    <Layout>
+    <Layout title="Blog">
       <h1>Blog</h1>
 
       <ul>
