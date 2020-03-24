@@ -138,14 +138,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _NavButton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavButton */ "./components/NavButton.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/johnsonsu/Developer/github/johnsonsu.github.io/components/Nav.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 var containerStyle = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
+  justifyContent: 'space-between',
   backgroundColor: '#f2f2f2',
   padding: '1em',
   borderRadius: '0.4em',
@@ -162,6 +166,15 @@ var iconStyle = {
   fontSize: '1.4em',
   backgroundColor: '#fefefe'
 };
+var navGroupStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center'
+};
+var externalLinkStyle = {
+  marginLeft: '0.8em',
+  filter: 'invert(14%) sepia(0%) saturate(3%) hue-rotate(189deg) brightness(100%) contrast(84%)'
+};
 var emojis = ['🦾', '🎸', '🤦🏻‍♂️', '🤯', '🚀', '🤩', '🤓', '🐑', '🍣', '🎮', '🗺'];
 
 var randomEmoji = function randomEmoji() {
@@ -173,14 +186,21 @@ var Nav = function Nav() {
     style: containerStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 44
+    },
+    __self: this
+  }, __jsx("div", {
+    style: navGroupStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
     },
     __self: this
   }, __jsx("div", {
     style: iconStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 46
     },
     __self: this
   }, randomEmoji()), __jsx(_NavButton__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -188,7 +208,7 @@ var Nav = function Nav() {
     title: "About",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 47
     },
     __self: this
   }), __jsx(_NavButton__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -196,10 +216,49 @@ var Nav = function Nav() {
     title: "Blog",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 48
     },
     __self: this
-  }));
+  })), __jsx("div", {
+    style: navGroupStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, __jsx("a", {
+    style: externalLinkStyle,
+    href: "https://github.com/johnsonsu",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "/github.svg",
+    height: "24em",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  })), __jsx("a", {
+    style: externalLinkStyle,
+    href: "https://www.linkedin.com/in/johnsonsu",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, __jsx("img", {
+    src: "/linkedin.svg",
+    height: "24em",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
@@ -243,10 +302,10 @@ var buttonStyle = {
 var linkStyle = {
   textDecoration: 'none',
   padding: '0.2em 0.4em',
-  fontSize: '1.2em'
+  fontSize: '1.2em',
+  color: '#666'
 };
 var linkSelectedStyle = {
-  fontWeight: '600',
   color: '#333'
 };
 
@@ -7020,7 +7079,7 @@ var __N_SSG = true;
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!****************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fpost%2F%5Bid%5D&absolutePagePath=%2FUsers%2Fjohnsonsu%2FDeveloper%2Fgithub%2Fjohnsonsu.github.io%2Fpages%2Fpost%2F%5Bid%5D.js ***!
   \****************************************************************************************************************************************************************************/
@@ -7043,5 +7102,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[id].js.map
