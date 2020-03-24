@@ -11,10 +11,10 @@ const linkStyle = {
   textDecoration: 'none',
   padding: '0.2em 0.4em',
   fontSize: '1.2em',
+  color: '#666',
 }
 
 const linkSelectedStyle = {
-  fontWeight: '600',
   color: '#333',
 }
 
