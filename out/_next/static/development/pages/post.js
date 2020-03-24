@@ -22,12 +22,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-var siteTitleStyle = {
-  marginTop: '1em',
-  marginLeft: '0.5em'
-};
 var layoutStyle = {
-  padding: '1em'
+  padding: '0.6em'
 };
 
 var Layout = function Layout(_ref) {
@@ -36,19 +32,19 @@ var Layout = function Layout(_ref) {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 11
     },
     __self: this
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 12
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 13
     },
     __self: this
   }, title), __jsx("meta", {
@@ -57,20 +53,20 @@ var Layout = function Layout(_ref) {
     key: "viewport",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 14
     },
     __self: this
   })), __jsx("div", {
     style: layoutStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 20
     },
     __self: this
   }, __jsx(_Nav__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 21
     },
     __self: this
   }), children));
@@ -105,8 +101,8 @@ var containerStyle = {
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: '#f2f2f2',
-  padding: '1em 2em',
-  marginTop: '2em',
+  padding: '1em',
+  marginTop: '0.6em',
   borderRadius: '0.4em',
   boxShadow: '0px 0px 30px 0px rgba(100, 100, 100, 0.4)'
 };
@@ -246,7 +242,8 @@ var buttonStyle = {
 };
 var linkStyle = {
   textDecoration: 'none',
-  padding: '0.2em 0.4em'
+  padding: '0.2em 0.4em',
+  fontSize: '1.2em'
 };
 var linkSelectedStyle = {
   fontWeight: '600',
@@ -262,7 +259,7 @@ var NavButton = function NavButton(_ref) {
     style: buttonStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -270,14 +267,14 @@ var NavButton = function NavButton(_ref) {
     as: href,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   }, __jsx("a", {
     style: _objectSpread({}, linkStyle, {}, isActive ? linkSelectedStyle : {}),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }, title)));
