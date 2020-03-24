@@ -188,7 +188,7 @@ var Nav = function Nav() {
     },
     __self: this
   }, randomEmoji()), __jsx(_NavButton__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    href: "/about",
+    href: "/",
     title: "About",
     __source: {
       fileName: _jsxFileName,
@@ -257,12 +257,12 @@ var NavButton = function NavButton(_ref) {
   var href = _ref.href,
       title = _ref.title;
   var router = Object(next_router__WEBPACK_IMPORTED_MODULE_4__["useRouter"])();
-  console.log('router', router);
+  var isActive = href === '/' && router.pathname === href || href !== '/' && router.pathname.startsWith(href);
   return __jsx("div", {
     style: buttonStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 26
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -270,14 +270,14 @@ var NavButton = function NavButton(_ref) {
     as: href,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: this
   }, __jsx("a", {
-    style: _objectSpread({}, linkStyle, {}, router.pathname.startsWith(href) ? linkSelectedStyle : {}),
+    style: _objectSpread({}, linkStyle, {}, isActive ? linkSelectedStyle : {}),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: this
   }, title)));
