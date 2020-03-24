@@ -3,13 +3,8 @@ import Head from 'next/head'
 
 import Nav from './Nav'
 
-const siteTitleStyle = {
-  marginTop: '1em',
-  marginLeft: '0.5em',
-}
-
 const layoutStyle = {
-  padding: '1em',
+  padding: '0.6em',
 }
 
 const Layout = ({ children, title }) => (

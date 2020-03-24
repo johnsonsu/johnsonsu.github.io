@@ -10,6 +10,7 @@ const buttonStyle = {
 const linkStyle = {
   textDecoration: 'none',
   padding: '0.2em 0.4em',
+  fontSize: '1.2em',
 }
 
 const linkSelectedStyle = {
