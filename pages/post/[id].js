@@ -3,13 +3,16 @@ import fs from 'fs'
 import marked from 'marked'
 
 import Layout from '../../components/Layout'
+import Module from '../../components/Module'
 
 function Post({ post }) {
   const markdown = { __html: marked(post) }
 
   return (
     <Layout>
-      <div dangerouslySetInnerHTML={markdown}></div>
+      <Module>
+        <div dangerouslySetInnerHTML={markdown}></div>
+      </Module>
     </Layout>
   )
 }

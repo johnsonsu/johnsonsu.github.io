@@ -2,22 +2,25 @@ import PropTypes from 'prop-types'
 import fs from 'fs'
 
 import Layout from '../components/Layout'
+import Module from '../components/Module'
 
 const Blog = ({ posts }) => {
   return (
     <Layout title="Blog">
-      <h1>Blog</h1>
+      <Module>
+        <h1>Blog</h1>
 
-      <ul>
-        {posts.map(post => {
-          const name = post.slice(0, -3)
-          return (
-            <li key={name}>
-              <a href={`/post/${name}`}>{name.replace('-', ' ')}</a>
-            </li>
-          )
-        })}
-      </ul>
+        <ul>
+          {posts.map(post => {
+            const name = post.slice(0, -3)
+            return (
+              <li key={name}>
+                <a href={`/post/${name}`}>{name.replace('-', ' ')}</a>
+              </li>
+            )
+          })}
+        </ul>
+      </Module>
     </Layout>
   )
 }

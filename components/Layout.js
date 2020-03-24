@@ -9,7 +9,7 @@ const siteTitleStyle = {
 }
 
 const layoutStyle = {
-  margin: '1em',
+  padding: '1em',
 }
 
 const Layout = ({ children, title }) => (
@@ -22,9 +22,10 @@ const Layout = ({ children, title }) => (
         key="viewport"
       />
     </Head>
-    <h1 style={siteTitleStyle}>🦾</h1>
-    <Nav />
-    <div style={layoutStyle}>{children}</div>
+    <div style={layoutStyle}>
+      <Nav />
+      {children}
+    </div>
   </div>
 )
 
