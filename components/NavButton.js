@@ -19,14 +19,16 @@ const linkSelectedStyle = {
 
 const NavButton = ({ href, title }) => {
   const router = useRouter()
-  console.log('router', router)
+  const isActive =
+    (href === '/' && router.pathname === href) ||
+    (href !== '/' && router.pathname.startsWith(href))
   return (
     <div style={buttonStyle}>
       <Link href={href} as={href}>
         <a
           style={{
             ...linkStyle,
-            ...(router.pathname.startsWith(href) ? linkSelectedStyle : {}),
+            ...(isActive ? linkSelectedStyle : {}),
           }}
         >
           {title}

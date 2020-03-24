@@ -29,7 +29,7 @@ const randomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)]
 const Nav = () => (
   <div style={containerStyle}>
     <div style={iconStyle}>{randomEmoji()}</div>
-    <NavButton href="/about" title="About" />
+    <NavButton href="/" title="About" />
     <NavButton href="/post" title="Blog" />
   </div>
 )

@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import Module from '../components/Module'
 
-const Home = () => (
+const About = () => (
   <Layout title="About">
     <Module>
       <h1>About</h1>
@@ -9,4 +9,4 @@ const Home = () => (
   </Layout>
 )
 
-export default Home
+export default About

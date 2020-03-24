@@ -5,11 +5,11 @@ import marked from 'marked'
 import Layout from '../../components/Layout'
 import Module from '../../components/Module'
 
-function Post({ post }) {
+function Post({ post, title }) {
   const markdown = { __html: marked(post) }
 
   return (
-    <Layout>
+    <Layout title={title}>
       <Module>
         <div dangerouslySetInnerHTML={markdown}></div>
       </Module>
@@ -33,6 +33,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       post,
+      title: params.id,
     },
   }
 }
