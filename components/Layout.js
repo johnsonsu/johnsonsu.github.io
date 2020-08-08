@@ -4,7 +4,11 @@ import Head from 'next/head'
 import Nav from './Nav'
 
 const layoutStyle = {
+  display: 'flex',
+  flexDirection: 'column',
   padding: '0.6em',
+  maxWidth: '800px',
+  margin: 'auto',
 }
 
 const Layout = ({ children, title }) => (
