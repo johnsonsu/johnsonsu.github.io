@@ -20,15 +20,20 @@ function Post({ post, title }) {
 export async function getStaticPaths() {
   const posts = await fs.promises.readdir('posts')
 
-  const paths = posts.map(post => ({
-    params: { id: post.slice(0, -3) },
-  }))
+  const paths = posts
+    .filter(post => !post.startsWith('.')) // hide hidden files
+    .map(post => ({
+      params: { id: encodeURIComponent(post.slice(0, -3)) }, // removes `.md`
+    }))
 
   return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-  const post = await fs.promises.readFile(`posts/${params.id}.md`, 'utf8')
+  const post = await fs.promises.readFile(
+    `posts/${decodeURIComponent(params.id)}.md`,
+    'utf8'
+  )
 
   return {
     props: {
@@ -40,6 +45,7 @@ export async function getStaticProps({ params }) {
 
 Post.propTypes = {
   post: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 export default Post

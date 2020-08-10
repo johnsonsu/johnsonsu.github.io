@@ -15,7 +15,9 @@ const Blog = ({ posts }) => {
             const name = post.slice(0, -3)
             return (
               <li key={name}>
-                <a href={`/post/${name}`}>{name.replace('-', ' ')}</a>
+                <a href={`/post/${encodeURIComponent(name)}`}>
+                  {name.replace('-', ' ')}
+                </a>
               </li>
             )
           })}
@@ -26,7 +28,8 @@ const Blog = ({ posts }) => {
 }
 
 export async function getStaticProps() {
-  const posts = await fs.promises.readdir('posts')
+  const files = await fs.promises.readdir('posts')
+  const posts = files.filter(post => !post.startsWith('.')) // hide hidden files
 
   return {
     props: {
