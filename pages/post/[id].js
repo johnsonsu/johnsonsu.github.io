@@ -2,13 +2,19 @@ import PropTypes from 'prop-types'
 
 import { getAllPostIds, getPostData } from '../../utils/posts'
 
+import utilStyles from '../../styles/utils.module.css'
+
 import Layout from '../../components/Layout'
 import Module from '../../components/Module'
+import Date from '../../components/Date'
 
 function Post({ postData }) {
   return (
     <Layout title={postData.title}>
       <Module>
+        <span className={utilStyles.lightText}>
+          <Date dateString={postData.date} />
+        </span>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
       </Module>
     </Layout>
