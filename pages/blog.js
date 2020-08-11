@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import fs from 'fs'
+
+import { getAllPosts } from '../utils/posts'
 
 import Layout from '../components/Layout'
 import Module from '../components/Module'
@@ -12,11 +13,10 @@ const Blog = ({ posts }) => {
 
         <ul>
           {posts.map(post => {
-            const name = post.slice(0, -3)
             return (
-              <li key={name}>
-                <a href={`/post/${encodeURIComponent(name)}`}>
-                  {name.replace('-', ' ')}
+              <li key={post.id}>
+                <a href={`/post/${encodeURIComponent(post.id)}`}>
+                  {post.title}
                 </a>
               </li>
             )
@@ -28,8 +28,7 @@ const Blog = ({ posts }) => {
 }
 
 export async function getStaticProps() {
-  const files = await fs.promises.readdir('posts')
-  const posts = files.filter(post => !post.startsWith('.')) // hide hidden files
+  const posts = getAllPosts()
 
   return {
     props: {
@@ -39,7 +38,13 @@ export async function getStaticProps() {
 }
 
 Blog.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      date: PropTypes.string,
+    })
+  ).isRequired,
 }
 
 export default Blog

@@ -45,7 +45,7 @@ const Nav = () => (
     <div style={navGroupStyle}>
       <div style={iconStyle}>{randomEmoji()}</div>
       <NavButton href="/" title="About" />
-      <NavButton href="/post" title="Blog" />
+      <NavButton href="/blog" title="Blog" />
     </div>
 
     <div style={navGroupStyle}>

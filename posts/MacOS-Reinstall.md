@@ -1,3 +1,8 @@
+---
+title: "MacOS Reinstall"
+date: "2020-02-22"
+---
+
 # MacOS Reinstall
 
 In case you wiped your Mac's hard disk or erased it's partition map (like me), don't panic.

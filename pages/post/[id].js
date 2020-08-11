@@ -1,51 +1,43 @@
 import PropTypes from 'prop-types'
-import fs from 'fs'
-import marked from 'marked'
+
+import { getAllPostIds, getPostData } from '../../utils/posts'
 
 import Layout from '../../components/Layout'
 import Module from '../../components/Module'
 
-function Post({ post, title }) {
-  const markdown = { __html: marked(post) }
-
+function Post({ postData }) {
   return (
-    <Layout title={title}>
+    <Layout title={postData.title}>
       <Module>
-        <div dangerouslySetInnerHTML={markdown}></div>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
       </Module>
     </Layout>
   )
 }
 
 export async function getStaticPaths() {
-  const posts = await fs.promises.readdir('posts')
-
-  const paths = posts
-    .filter(post => !post.startsWith('.')) // hide hidden files
-    .map(post => ({
-      params: { id: encodeURIComponent(post.slice(0, -3)) }, // removes `.md`
-    }))
+  const paths = getAllPostIds()
 
   return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-  const post = await fs.promises.readFile(
-    `posts/${decodeURIComponent(params.id)}.md`,
-    'utf8'
-  )
+  const postData = await getPostData(params.id)
 
   return {
     props: {
-      post,
-      title: params.id,
+      postData,
     },
   }
 }
 
 Post.propTypes = {
-  post: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  postData: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    date: PropTypes.string,
+    contentHtml: PropTypes.string,
+  }),
 }
 
 export default Post
