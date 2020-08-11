@@ -1,5 +1,4 @@
 import NavButton from './NavButton'
-import Link from 'next/link'
 
 const containerStyle = {
   display: 'flex',

@@ -9,6 +9,7 @@
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"johnsonsu.com\" >> out/CNAME && git add out/ && git commit -m \"Deploy Next.js to master\" && git subtree push --prefix out origin master"
   },
   "dependencies": {
+    "date-fns": "^2.15.0",
     "gray-matter": "^4.0.2",
     "next": "^9.5.1",
     "react": "^16.13.1",

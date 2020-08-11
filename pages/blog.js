@@ -2,8 +2,11 @@ import PropTypes from 'prop-types'
 
 import { getAllPosts } from '../utils/posts'
 
+import utilStyles from '../styles/utils.module.css'
+
 import Layout from '../components/Layout'
 import Module from '../components/Module'
+import Date from '../components/Date'
 
 const Blog = ({ posts }) => {
   return (
@@ -11,13 +14,15 @@ const Blog = ({ posts }) => {
       <Module>
         <h1>Blog</h1>
 
-        <ul>
-          {posts.map(post => {
+        <ul className={utilStyles.list}>
+          {posts.map(({ id, title, date }) => {
             return (
-              <li key={post.id}>
-                <a href={`/post/${encodeURIComponent(post.id)}`}>
-                  {post.title}
-                </a>
+              <li className={utilStyles.listItem} key={id}>
+                <a href={`/post/${encodeURIComponent(id)}`}>{title}</a>
+                <br />
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small>
               </li>
             )
           })}

@@ -5,7 +5,7 @@ const About = () => (
   <Layout title="About">
     <Module>
       <h1>About</h1>
-      <p>Hi, my name is Johnson. I'm a software developer.</p>
+      <p>Hi, my name is Johnson. I&apos;m a software developer.</p>
     </Module>
   </Layout>
 )
