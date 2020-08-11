@@ -18,7 +18,7 @@ const Blog = ({ posts }) => {
           {posts.map(({ id, title, date }) => {
             return (
               <li className={utilStyles.listItem} key={id}>
-                <a href={`/post/${encodeURIComponent(id)}`}>{title}</a>
+                <a href={`/post/${id}`}>{title}</a>
                 <br />
                 <small className={utilStyles.lightText}>
                   <Date dateString={date} />

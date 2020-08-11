@@ -3,12 +3,16 @@ import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 
+function parseFileNameToId(fileName) {
+  return encodeURIComponent(fileName.replace(/\.md$/, ''))
+}
+
 export function getAllPosts() {
   const fileNames = fs.readdirSync('posts')
   const allPostsData = fileNames
     .filter(fileName => !fileName.startsWith('.'))
     .map(fileName => {
-      const id = fileName.replace(/\.md$/, '')
+      const id = parseFileNameToId(fileName)
 
       const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf8')
 
@@ -34,15 +38,12 @@ export function getAllPostIds() {
   return fileNames
     .filter(fileName => !fileName.startsWith('.'))
     .map(fileName => ({
-      params: { id: encodeURIComponent(fileName.replace(/\.md$/, '')) },
+      params: { id: parseFileNameToId(fileName) },
     }))
 }
 
 export async function getPostData(id) {
-  const fileContents = fs.readFileSync(
-    `posts/${decodeURIComponent(id)}.md`,
-    'utf8'
-  )
+  const fileContents = fs.readFileSync(`posts/${id}.md`, 'utf8')
   const matterResult = matter(fileContents)
 
   const processedContent = await remark()
