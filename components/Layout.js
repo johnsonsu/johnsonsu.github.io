@@ -6,7 +6,7 @@ import Nav from './Nav'
 const layoutStyle = {
   display: 'flex',
   flexDirection: 'column',
-  padding: '1em',
+  padding: '0.5em',
   maxWidth: '800px',
   margin: 'auto',
 }
