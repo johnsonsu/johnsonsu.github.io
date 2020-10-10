@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
 
+const DISQUS_SCRIPT = 'disq_script'
+
 const Comments = ({ fullUrl, id }) => {
   useEffect(() => {
-    const DISQUS_SCRIPT = 'disq_script'
     const sd = document.getElementById(DISQUS_SCRIPT)
     const disqus_config = () => {
       this.page.url = fullUrl
