@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Layout from '../components/Layout'
 import Module from '../components/Module'
 import { GITHUB_URL, LINKDIN_URL } from '../constants/url'
