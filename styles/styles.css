@@ -19,3 +19,19 @@ a {
 a:hover {
   color: #666;
 }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fade-in 400ms ease-out;
+}

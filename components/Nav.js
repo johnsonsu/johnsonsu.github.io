@@ -1,4 +1,5 @@
 import NavButton from './NavButton'
+import { GITHUB_URL, LINKDIN_URL } from '../constants/url'
 
 const containerStyle = {
   display: 'flex',
@@ -48,10 +49,10 @@ const Nav = () => (
     </div>
 
     <div style={navGroupStyle}>
-      <a style={externalLinkStyle} href="https://github.com/johnsonsu">
+      <a style={externalLinkStyle} href={GITHUB_URL}>
         <img src="/github.svg" height="24em" />
       </a>
-      <a style={externalLinkStyle} href="https://www.linkedin.com/in/johnsonsu">
+      <a style={externalLinkStyle} href={LINKDIN_URL}>
         <img src="/linkedin.svg" height="24em" />
       </a>
     </div>
