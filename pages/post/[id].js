@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import PropTypes from 'prop-types'
 
 import { useRouter } from 'next/router'
@@ -6,7 +7,6 @@ import { getAllPostIds, getPostData } from '../../utils/posts'
 
 import utilStyles from '../../styles/utils.module.css'
 
-import Layout from '../../components/Layout'
 import Module from '../../components/Module'
 import Date from '../../components/Date'
 import Comments from '../../components/Comments'
@@ -14,7 +14,10 @@ import Comments from '../../components/Comments'
 function Post({ postData }) {
   const router = useRouter()
   return (
-    <Layout title={postData.title}>
+    <>
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
       <Module>
         <span className={utilStyles.lightText}>
           <Date dateString={postData.date} />
@@ -27,7 +30,7 @@ function Post({ postData }) {
           id={postData.title}
         />
       </Module>
-    </Layout>
+    </>
   )
 }
 

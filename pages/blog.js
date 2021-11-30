@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types'
+import Head from 'next/head'
 
 import { getAllPosts } from '../utils/posts'
 
 import utilStyles from '../styles/utils.module.css'
 
-import Layout from '../components/Layout'
 import Module from '../components/Module'
 import Date from '../components/Date'
 
 const Blog = ({ posts }) => {
   return (
-    <Layout title="Blog">
+    <>
+      <Head>
+        <title>Blog</title>
+      </Head>
       <Module>
         <h1>Blog</h1>
 
@@ -28,7 +31,7 @@ const Blog = ({ posts }) => {
           })}
         </ul>
       </Module>
-    </Layout>
+    </>
   )
 }
 

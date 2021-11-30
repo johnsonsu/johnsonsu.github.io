@@ -11,10 +11,10 @@ const layoutStyle = {
   margin: 'auto',
 }
 
-const Layout = ({ children, title }) => (
+const Layout = ({ children }) => (
   <div>
     <Head>
-      <title>{title}</title>
+      <title>Johnson Su</title>
       <meta
         name="viewport"
         content="initial-scale=1.0, width=device-width"

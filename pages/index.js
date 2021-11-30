@@ -1,9 +1,13 @@
-import Layout from '../components/Layout'
+import Head from 'next/head'
+
 import Module from '../components/Module'
 import { GITHUB_URL, LINKDIN_URL } from '../constants/url'
 
 const About = () => (
-  <Layout title="About">
+  <>
+    <Head>
+      <title>About</title>
+    </Head>
     <Module>
       <h1>About</h1>
       <p>Hi, my name is Johnson. I&apos;m a software developer.</p>
@@ -12,7 +16,7 @@ const About = () => (
         <a href={GITHUB_URL}>Github</a>.
       </p>
     </Module>
-  </Layout>
+  </>
 )
 
 export default About

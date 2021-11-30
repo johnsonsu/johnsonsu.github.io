@@ -41,7 +41,7 @@ const emojis = ['🦾', '🎸', '🤦🏻‍♂️', '🤯', '🚀', '🤩', '�
 const randomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)]
 
 const Nav = () => (
-  <div style={containerStyle}>
+  <div className="fade-in" style={containerStyle}>
     <div style={navGroupStyle}>
       <div style={iconStyle}>{randomEmoji()}</div>
       <NavButton href="/" title="About" />
