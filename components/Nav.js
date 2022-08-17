@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import NavButton from './NavButton'
 import { GITHUB_URL, LINKDIN_URL } from '../constants/url'
 
@@ -40,23 +41,30 @@ const emojis = ['🦾', '🎸', '🤦🏻‍♂️', '🤯', '🚀', '🤩', '�
 
 const randomEmoji = () => emojis[Math.floor(Math.random() * emojis.length)]
 
-const Nav = () => (
-  <div style={containerStyle}>
-    <div style={navGroupStyle}>
-      <div style={iconStyle}>{randomEmoji()}</div>
-      <NavButton href="/" title="About" />
-      <NavButton href="/blog" title="Blog" />
-    </div>
+const Nav = () => {
+  const [emoji, setEmoji] = useState(null)
 
-    <div style={navGroupStyle}>
-      <a style={externalLinkStyle} href={GITHUB_URL}>
-        <img src="/github.svg" height="24em" />
-      </a>
-      <a style={externalLinkStyle} href={LINKDIN_URL}>
-        <img src="/linkedin.svg" height="24em" />
-      </a>
-    </div>
-  </div>
-)
+  useEffect(() => {
+    setEmoji(randomEmoji)
+  }, [])
 
+  return (
+    <div style={containerStyle}>
+      <div style={navGroupStyle}>
+        <div style={iconStyle}>{emoji}</div>
+        <NavButton href="/" title="About" />
+        <NavButton href="/blog" title="Blog" />
+      </div>
+
+      <div style={navGroupStyle}>
+        <a style={externalLinkStyle} href={GITHUB_URL}>
+          <img src="/github.svg" height="24em" />
+        </a>
+        <a style={externalLinkStyle} href={LINKDIN_URL}>
+          <img src="/linkedin.svg" height="24em" />
+        </a>
+      </div>
+    </div>
+  )
+}
 export default Nav
